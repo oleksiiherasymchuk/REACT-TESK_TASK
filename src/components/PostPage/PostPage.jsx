@@ -3,9 +3,8 @@ import s from "./PostPage.module.css";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import InputMask from "react-input-mask";
 import { useDispatch, useSelector } from "react-redux";
-import { createNewUser, createToken, savePhotoSuccess } from "../../redux/appReducer";
+import { createNewUser, savePhotoSuccess } from "../../redux/appReducer";
 import { getPhotoURL } from "../../redux/appSelector";
-import axios from "axios";
 
 const PhoneInput = ({ field, form, ...rest }) => {
   return (
@@ -21,14 +20,8 @@ const PhoneInput = ({ field, form, ...rest }) => {
 };
 
 const PostPage = (props) => {
-
-  const instance = axios.create({
-    baseURL: "https://frontend-test-assignment-api.abz.agency/api/v1/",
-  });
-
   const dispatch = useDispatch();
   const photoUserURL = useSelector(getPhotoURL);
-  // const token = useSelector(getToken)
 
   const [isPhotoSelected, setIsPhotoSelected] = useState(false);
 
@@ -71,46 +64,18 @@ const PostPage = (props) => {
     return errors;
   };
 
-  // const submit = async (values, { setSubmitting }) => {
-  //   const newUser = {
-  //     name: values.name,
-  //     email: values.email,
-  //     phone: values.phone,
-  //     position_id: Number(values.radioOption),
-  //     photo: photoUserURL,
-  //   };
-  //   // console.log(newUser);
-  //   await dispatch(createToken())
-  //   dispatch(createNewUser(newUser))
-  //   setSubmitting(false);
-  // };
   const submit = async (values, { setSubmitting }) => {
-    try {
-      const tokenResponse = await instance.get("token");
-      const token = tokenResponse.data.token;
-  
-      const formData = new FormData();
-      formData.append("position_id", Number(values.radioOption));
-      formData.append("name", values.name);
-      formData.append("email", values.email);
-      formData.append("phone", values.phone);
-      formData.append("photo", photoUserURL);
-  
-      const response = await instance.post("users", formData, {
-        headers: {
-          Token: token,
-        },
-      });
-      console.log(response.data);
-  
-      setSubmitting(false);
-    } catch (error) {
-      console.log("API createUser error:", error);
-      alert(error.message)
-      setSubmitting(false);
-    }
+    const newUser = {
+      name: values.name,
+      email: values.email,
+      phone: values.phone,
+      position_id: Number(values.radioOption),
+      photo: photoUserURL,
+    };
+    console.log(newUser);
+    dispatch(createNewUser(newUser));
+    setSubmitting(false);
   };
-
 
   return (
     <div className={s.postPage}>

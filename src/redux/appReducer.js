@@ -1,4 +1,4 @@
-import { API, token } from "../api/api";
+import { API } from "../api/api";
 
 const SET_USERS = "app/SET_USERS";
 const SET_CURRENT_PAGE = "app/SET_CURRENT_PAGE";
@@ -7,7 +7,6 @@ const SET_TOTAL_USERS_COUNT = "app/SET_TOTAL_USERS_COUNT";
 const SET_IS_LOADING = "app/SET_IS_LOADING";
 const SET_IS_LAST_PAGE = "app/SET_IS_LAST_PAGE";
 const SAVE_PHOTO_SUCCESS = "app/SAVE_PHOTO_SUCCESS";
-const SET_TOKEN = "app/SET_TOKEN";
 
 let initialAppState = {
   users: [],
@@ -16,7 +15,6 @@ let initialAppState = {
   totalUsersCount: 0,
   isLoading: true,
   photoURL: null,
-  token: "",
 };
 
 const appReducer = (state = initialAppState, action) => {
@@ -62,11 +60,6 @@ const appReducer = (state = initialAppState, action) => {
         ...state,
         photoURL: action.payload,
       };
-    case SET_TOKEN:
-      return {
-        ...state,
-        token: action.payload,
-      };
     default:
       return state;
   }
@@ -99,11 +92,6 @@ export const savePhotoSuccess = (photoURL) => ({
   payload: photoURL,
 });
 
-export const setToken = (token) => ({
-  type: SET_TOKEN,
-  payload: token,
-});
-
 export const getUsers = (currentPage, pageSize) => {
   return async (dispatch) => {
     try {
@@ -111,7 +99,7 @@ export const getUsers = (currentPage, pageSize) => {
       dispatch(setCurrentPage(currentPage));
 
       let data = await API.getAllUsers(currentPage, pageSize);
-      //   console.log(data);
+
       dispatch(setUsers(data.users));
       dispatch(setIsLoading(false));
       dispatch(setTotalUsersCount(data["total_users"]));
@@ -121,27 +109,15 @@ export const getUsers = (currentPage, pageSize) => {
   };
 };
 
-export const createToken = () => {
-  return async (dispatch) => {
-    let response = await API.token();
-    // console.log("Token response:", response);
-    // console.log("Current token:", token);
-    dispatch(setToken(response));
-  };
-};
-
 export const createNewUser = (user) => {
   return async (dispatch) => {
-    try{
-        // const token = await API.token();
-        // user.token = token;
-        let response = await API.createUser(user);
-        console.log(response);
-    } catch(error){
-        console.log("Error creating new user:", error);
+    try {
+      let response = await API.createUser(user);
+      console.log(response);
+      // dispatch(setUsers());
+    } catch (error) {
+      console.log("Error creating new user:", error);
     }
-
-  
   };
 };
 
