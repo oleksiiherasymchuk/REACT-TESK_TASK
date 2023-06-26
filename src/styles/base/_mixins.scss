@@ -1,0 +1,37 @@
+@import "./variables";
+
+@mixin nunito-regular-40 {
+  font-family: "Nunito", sans-serif;
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 40px;
+}
+
+@mixin nunito-regular-16 {
+  font-family: "Nunito", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 26px;
+}
+
+@mixin signUpButton{
+  width: 100px;
+  height: 34px;
+  border-radius: 80px;
+  background-color: $buttonBackgroundColor;
+  @include nunito-regular-16;
+
+  &:hover {
+    background-color: $buttonHoverColor;
+  }
+}
+
+@mixin signUpButtonDisabled{
+  width: 100px;
+  height: 34px;
+  border-radius: 80px;
+  background-color: #B4B4B4;
+  @include nunito-regular-16;
+  color: #FFFFFF;
+}
+

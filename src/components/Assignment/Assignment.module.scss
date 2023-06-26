@@ -1,0 +1,87 @@
+@import "../../styles/base/mixins";
+
+.assignment {
+  width: 2560px;
+  height: 650px;
+  background-image: url("./image/assign.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 1170px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  margin: 0 auto;
+
+  &Text {
+    width: 380px;
+    height: 291px;
+    display: flex;
+    flex-direction: column;
+
+    h1 {
+      @include nunito-regular-40;
+      color: #ffffff;
+    }
+
+    p {
+      @include nunito-regular-16;
+      color: #ffffff;
+      padding-top: 23px;
+    }
+  }
+
+  &Button {
+    position: relative;
+    top: 0px;
+    
+    button {
+      @include signUpButton;
+    }
+  }
+}
+
+@media screen and (min-width: 360px) and (max-width: 480px){
+  .assignment {
+    width: 360px;
+    height: 500px;
+  
+    &Text {
+      width: 328px;
+      height: 389px;
+    }
+  
+    &Button {
+      top: -32px;
+    }
+  }
+}
+
+@media screen and (min-width: 481px) and (max-width: 820px){
+  .assignment {
+    width: 768px;
+    height: 500px;
+  
+    &Text {
+      width: 380px;
+      height: 292px;
+    }
+  }
+}
+
+
+@media screen and (min-width: 821px) and (max-width: 1600px) {
+  .assignment {
+    width: 1024px;
+    height: 650px;
+  
+    &Text {
+      width: 380px;
+      height: 292px;
+    }
+
+  }
+}
+
+

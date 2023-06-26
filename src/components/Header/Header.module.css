@@ -1,0 +1,91 @@
+.header {
+  width: 2560px;
+  height: 60px;
+  background-color: #ffffff;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 0 auto;
+}
+.headerIcon {
+  margin-left: 695px;
+  display: flex;
+  width: 120px;
+}
+.headerIcon span {
+  font-family: "Nunito", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 26px;
+  font-size: 14px;
+  line-height: 24px;
+}
+.headerUser {
+  margin-left: 840px;
+}
+.headerUser button {
+  width: 100px;
+  height: 34px;
+  border-radius: 80px;
+  background-color: #F4E041;
+  font-family: "Nunito", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 26px;
+}
+.headerUser button:hover {
+  background-color: #FFE302;
+}
+.headerSignUp {
+  margin-left: 10px;
+}
+.headerSignUp button {
+  width: 100px;
+  height: 34px;
+  border-radius: 80px;
+  background-color: #F4E041;
+  font-family: "Nunito", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 26px;
+}
+.headerSignUp button:hover {
+  background-color: #FFE302;
+}
+
+@media screen and (min-width: 360px) and (max-width: 460px) {
+  .header {
+    width: 360px;
+    height: 60px;
+  }
+  .headerIcon {
+    margin-left: 16px;
+  }
+  .headerUser {
+    margin-left: -2px;
+  }
+}
+@media screen and (min-width: 461px) and (max-width: 820px) {
+  .header {
+    width: 768px;
+    height: 60px;
+  }
+  .headerIcon {
+    margin-left: 32px;
+  }
+  .headerUser {
+    margin-left: 374px;
+  }
+}
+@media screen and (min-width: 821px) and (max-width: 1600px) {
+  .header {
+    width: 1024px;
+    height: 55px;
+  }
+  .headerIcon {
+    margin-left: 60px;
+  }
+  .headerUser {
+    margin-left: 577px;
+  }
+}/*# sourceMappingURL=Header.module.css.map */

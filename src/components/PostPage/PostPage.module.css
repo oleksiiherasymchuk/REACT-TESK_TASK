@@ -1,0 +1,330 @@
+.postPage {
+  width: 2560px;
+  height: 741px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 140px auto 100px;
+}
+.postPageContent {
+  height: 741px;
+  width: 380px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.postPageContent h1 {
+  font-family: "Nunito", sans-serif;
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 40px;
+  margin-bottom: 40px;
+  margin-left: 0px;
+  width: 100%;
+  text-align: center;
+}
+.postPageContentForm {
+  padding-top: 7px;
+  width: 100%;
+  height: 658px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  text-align: center;
+}
+.postPageContentForm form {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+.postPageContentFormInput {
+  width: 100%;
+  height: 54px;
+  border-radius: 4px;
+  color: black;
+  border: 1px solid #d0cfcf;
+  padding-left: 16px;
+  font-family: "Nunito", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 26px;
+  position: relative;
+  margin-bottom: 50px;
+}
+.postPageContentFormInputRadio {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 160px;
+  justify-content: space-between;
+  align-items: flex-start;
+  position: relative;
+  top: -26px;
+}
+.postPageContentFormInputRadio p {
+  font-family: "Nunito", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 26px;
+}
+.postPageContentFormInputRadio input {
+  height: 20px;
+  width: 20px;
+  margin-right: 8px;
+  font-family: "Nunito", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 26px;
+  position: relative;
+  top: 4px;
+}
+.postPageContentFormInputRadio span {
+  font-family: "Nunito";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 26px;
+}
+.postPageContentFormInputPhone {
+  font-family: "Nunito";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
+  color: #7e7e7e;
+  margin-top: 4px;
+  position: relative;
+  top: -49px;
+  left: -106px;
+}
+.postPageContentFormPhoto {
+  display: flex;
+  width: 100%;
+  height: 54px;
+  margin-top: 23px;
+}
+.postPageContentFormPhoto input {
+  display: flex;
+  height: 100%;
+  width: 83px;
+  border: 1px solid rgba(0, 0, 0, 0.87);
+  border-radius: 4px 0px 0px 4px;
+  font-family: "Nunito", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 26px;
+}
+.postPageContentFormPhoto input::before {
+  content: "Upload";
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 83px;
+}
+.postPageContentFormPhoto div {
+  width: 297px;
+  height: 100%;
+  border: 1px solid #d0cfcf;
+  border-radius: 0px 4px 4px 0px;
+  padding-left: 16px;
+  font-family: "Nunito", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 26px;
+  color: #7e7e7e;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.postPageContentFormButton {
+  margin-top: 49px;
+}
+.postPageContentFormButtonB {
+  width: 100px;
+  height: 34px;
+  border-radius: 80px;
+  background-color: #B4B4B4;
+  font-family: "Nunito", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 26px;
+  color: #FFFFFF;
+}
+.postPageContentFormButtonBD {
+  width: 100px;
+  height: 34px;
+  border-radius: 80px;
+  background-color: #B4B4B4;
+  font-family: "Nunito", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 26px;
+  color: #FFFFFF;
+  background-color: #F4E041;
+}
+.postPageContentFormButtonBD:hover {
+  background-color: #FFE302;
+}
+
+@media screen and (min-width: 360px) and (max-width: 460px) {
+  .postPage {
+    width: 360px;
+    height: 750px;
+    margin: 140px auto 0;
+  }
+  .postPageContent {
+    width: 328px;
+  }
+  .postPageContent h1 {
+    margin-bottom: 46px;
+    margin-left: 42px;
+  }
+  .postPageContentForm {
+    width: 100%;
+    height: 658px;
+  }
+  .postPageContentForm form {
+    width: 100%;
+    height: 100%;
+  }
+  .postPageContentFormInput {
+    width: 100%;
+    height: 54px;
+  }
+  .postPageContentFormInputRadio {
+    width: 100%;
+    height: 160px;
+    top: -26px;
+  }
+  .postPageContentFormInputRadio input {
+    top: 4px;
+  }
+  .postPageContentFormInputPhone {
+    top: -51px;
+    left: -80px;
+  }
+  .postPageContentFormPhoto {
+    width: 100%;
+    height: 54px;
+    margin-top: 23px;
+  }
+  .postPageContentFormPhoto button {
+    height: 100%;
+    width: 102px;
+  }
+  .postPageContentFormPhoto div {
+    width: 297px;
+  }
+  .postPageContentFormButton {
+    margin-top: 49px;
+  }
+}
+@media screen and (min-width: 461px) and (max-width: 820px) {
+  .postPage {
+    width: 768px;
+    height: 750px;
+    margin: 265px auto 0;
+  }
+  .postPageContent {
+    width: 704px;
+  }
+  .postPageContent h1 {
+    margin-bottom: 46px;
+  }
+  .postPageContentForm {
+    padding-top: 4px;
+    width: 380px;
+    height: 658px;
+  }
+  .postPageContentForm form {
+    width: 100%;
+    height: 100%;
+  }
+  .postPageContentFormInput {
+    width: 100%;
+    height: 54px;
+  }
+  .postPageContentFormInputRadio {
+    width: 100%;
+    height: 160px;
+    position: relative;
+    top: -26px;
+  }
+  .postPageContentFormInputRadio input {
+    height: 20px;
+    width: 20px;
+    margin-right: 8px;
+    top: 4px;
+  }
+  .postPageContentFormInputPhone {
+    top: -54px;
+    left: -106px;
+  }
+  .postPageContentFormPhoto {
+    width: 100%;
+    height: 54px;
+    margin-top: 23px;
+  }
+  .postPageContentFormPhoto button {
+    width: 83px;
+  }
+  .postPageContentFormButton {
+    margin-top: 49px;
+  }
+}
+@media screen and (min-width: 821px) and (max-width: 1600px) {
+  .postPage {
+    width: 1024px;
+    height: 750px;
+    margin-top: 140px auto 0;
+  }
+  .postPageContent {
+    width: 704px;
+  }
+  .postPageContent h1 {
+    margin-bottom: 46px;
+  }
+  .postPageContentForm {
+    width: 380px;
+    height: 658px;
+  }
+  .postPageContentForm form {
+    width: 100%;
+    height: 100%;
+  }
+  .postPageContentFormInput {
+    width: 100%;
+    height: 54px;
+  }
+  .postPageContentFormInputRadio {
+    height: 160px;
+    top: -26px;
+  }
+  .postPageContentFormInputRadio input {
+    height: 20px;
+    width: 20px;
+    top: 4px;
+  }
+  .postPageContentFormInputPhone {
+    top: -50px;
+    left: -106px;
+  }
+  .postPageContentFormPhoto {
+    height: 54px;
+    margin-top: 23px;
+  }
+  .postPageContentFormPhoto button {
+    width: 83px;
+  }
+  .postPageContentFormButton {
+    margin-top: 49px;
+  }
+}/*# sourceMappingURL=PostPage.module.css.map */
