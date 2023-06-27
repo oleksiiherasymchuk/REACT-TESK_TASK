@@ -19,12 +19,6 @@ let initialAppState = {
 
 const appReducer = (state = initialAppState, action) => {
   switch (action.type) {
-    // case SAVE_PHOTO_SUCCESS: {
-    //     return {
-    //       ...state,
-    //       profile: { ...state.profile, photos: action.payload },
-    //     };
-    //   }
     case SET_CURRENT_PAGE:
       return {
         ...state,

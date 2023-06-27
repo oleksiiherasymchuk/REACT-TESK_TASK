@@ -77,6 +77,8 @@ const PostPage = (props) => {
     setSubmitting(false);
   };
 
+  
+
   return (
     <div className={s.postPage}>
       <div className={s.postPageContent}>
@@ -198,7 +200,6 @@ const PostPage = (props) => {
                     // required
                     onChange={onPhotoSelected}
                   />
-                  {/* <input type={"file"} name="photo" onChange={onPhotoSelected} /> */}
                   {!isPhotoSelected && <div>Upload your photo</div>}
                   {isPhotoSelected && (
                     <div style={{ color: "black" }}>Item</div>
@@ -221,7 +222,6 @@ const PostPage = (props) => {
                 <div className={s.postPageContentFormButton}>
                   <button
                     type="submit"
-                    // disabled={isSubmitting}
                     disabled={isSubmitting | !isValid}
                     className={
                       isValid

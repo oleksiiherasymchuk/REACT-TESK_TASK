@@ -10,8 +10,12 @@ const App = () => {
     <div className={s.app}>
       <Header />
       <Assignment />
-      <GetPage />
-      <PostPage />
+      <div id="getPageSection">
+        <GetPage />
+      </div>
+      <div id="postPageSection">
+        <PostPage />
+      </div>
     </div>
   );
 };
